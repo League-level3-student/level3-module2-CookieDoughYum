@@ -22,4 +22,68 @@ public class Algorithms {
 		}
 		return pearls;
 	}
-}
+
+	public static double findTallest(List<Double> peeps) {
+		// TODO Auto-generated method stub
+		boolean swap=true;
+		while(swap) {
+			swap=false;
+		for(int i=0; i<peeps.size()-1; i++) {
+			if(peeps.get(i)>peeps.get(i+1)) {
+				Double temp=peeps.get(i);
+				Double temp1=peeps.get(i+1);
+				temp=peeps.get(i+1);
+				temp1=temp;
+	            swap=true;
+			}
+		}
+		return peeps.get(peeps.size()-1);
+	}
+		return -1;
+	}
+
+	public static Object findLongestWord(List<String> words) {
+		// TODO Auto-generated method stub
+		String longest = null;
+		for(int i=0; i<words.size()-1; i++) {
+			if(words.get(i).length()<words.get(i+1).length()) {
+				longest=words.get(i);
+			}
+		}
+		int longestLength=Integer.parseInt(longest);
+		if(longestLength<words.get(words.size()).length()) {
+			longest=words.get(words.size());
+		}
+		return longest;
+	}
+
+	public static Object containsSOS(List<String> message1) {
+		// TODO Auto-generated method stub
+		for(int i=0; i<message1.size(); i++) {
+			if(message1.get(i).contains("... --- ...")) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static List<String> sortScores(List<Double> results) {
+		// TODO Auto-generated method stub
+		boolean swap=true;
+		while(swap) {
+			swap=false;
+		for(int i=0; i<results.size()-1; i++) {
+			if(results.get(i)>results.get(i+1)) {
+				Double temp=results.get(i);
+				Double temp1=results.get(i+1);
+				temp=results.get(i+1);
+				temp1=temp;
+	            swap=true;
+			}
+		}
+		return results.get(results.size()-1);
+	}
+		return -1;
+	}
+	}
+
