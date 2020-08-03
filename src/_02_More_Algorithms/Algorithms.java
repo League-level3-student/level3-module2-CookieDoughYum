@@ -67,7 +67,7 @@ public class Algorithms {
 		return false;
 	}
 
-	public static List<String> sortScores(List<Double> results) {
+	public static List<Double> sortScores(List<Double> results) {
 		// TODO Auto-generated method stub
 		boolean swap=true;
 		while(swap) {
@@ -81,9 +81,37 @@ public class Algorithms {
 	            swap=true;
 			}
 		}
-		return results.get(results.size()-1);
+		return results;
 	}
-		return -1;
+		return results;
+	}
+
+	public static Object sortDNA(List<String> unsortedSequences) {
+		// TODO Auto-generated method stub
+		String longest = null;
+		for(int i=0; i<unsortedSequences.size()-1; i++) {
+			if(unsortedSequences.get(i).length()<unsortedSequences.get(i+1).length()) {
+				longest=unsortedSequences.get(i);
+			}
+		}
+		int longestLength=Integer.parseInt(longest);
+		if(longestLength<unsortedSequences.get(unsortedSequences.size()).length()) {
+			longest=unsortedSequences.get(unsortedSequences.size());
+		}
+		return unsortedSequences;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		// TODO Auto-generated method stub
+		for(int i=0; i<words.size()-1; i++) {
+			if(words.get(i).compareTo(words.get(i+1))>0) {
+				String temp=words.get(i);
+				String temp1=words.get(i+1);
+				temp=temp1;
+				temp1=temp;
+			}
+		}
+		return words;
 	}
 	}
 
